@@ -1,0 +1,14 @@
+<header>
+  <div>
+    <ul>
+      <li><a href="/">Home</a></li>
+
+      <% if(!loggedUser){ %>
+      <li><a href="/signup">Sign up</a></li>
+      <li><a href="/login">Login</a></li>
+      <% } else { %>
+      <li><a href="/logout">Logout</a></li>
+      <% } %>
+    </ul>
+  </div>
+</header>

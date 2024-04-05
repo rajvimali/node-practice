@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <%-include('../partials/header',{loggedUser}) %>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>email</th>
+          <th>password</th>
+          <th>age</th>
+          <th>course</th>
+          <th colspan="2">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% users.forEach((item)=>{ %>
+        <tr>
+          <td><%=item.name %></td>
+          <td><%=item.email %></td>
+          <td><%=item.password %></td>
+          <td><%=item.age %></td>
+          <td><%=item.course %></td>
+          <td>
+            <a href="/edit/<%=item.id %>">EDIT</a>
+          </td>
+          <td>
+            <a href="/delete/<%=item.id %>">DELETE</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>

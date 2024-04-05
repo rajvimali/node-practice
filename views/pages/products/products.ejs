@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>image</th>
+          <th>name</th>
+          <th>description</th>
+          <th colspan="2">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% products.forEach((item)=>{ %>
+        <tr>
+          <td><img src="<%=item.image %>" alt="" width="150px" /></td>
+          <td><%=item.name %></td>
+          <td><%=item.description %></td>
+          <td>
+            <a href="/edit/<%=item.id %>">EDIT</a>
+          </td>
+          <td>
+            <a href="/delete/<%=item.id %>">DELETE</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>

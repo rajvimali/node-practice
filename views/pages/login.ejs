@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <%-include('../partials/header',{loggedUser}) %>
+    <h1>Login</h1>
+    <!-- <form action="/login" method="post"> -->
+    <form action="/passport/login" method="post">
+      <input type="email" name="username" id="" placeholder="email" />
+      <input type="password" name="password" id="" placeholder="password" />
+      <button>Login</button>
+    </form>
+  </body>
+</html>
